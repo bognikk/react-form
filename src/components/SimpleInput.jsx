@@ -48,37 +48,40 @@ const SimpleInput = (props) => {
     : "form-control";
 
   return (
-    <form onSubmit={formSubmisionHandler}>
-      <div className={nameInputClasses}>
-        <label htmlFor="name">Your Name</label>
-        <input
-          type="text"
-          id="name"
-          value={enteredName}
-          onChange={nameChangeHandler}
-          onBlur={nameBlurHandler}
-        />
-        {nameInputHasError && (
-          <p className="error-text">Name must not be empty.</p>
-        )}
-      </div>
-      <div className={emailInputClasses}>
-        <label htmlFor="email">E-Mail</label>
-        <input
-          type="email"
-          id="email"
-          onChange={emailChangeHandler}
-          onBlur={emailBlurHandler}
-          value={enteredEmail}
-        />
-        {emailInputHasError && (
-          <p className="error-text">Please enter a valid email.</p>
-        )}
-      </div>
-      <div className="form-actions">
-        <button disabled={!formIsValid}>Submit</button>
-      </div>
-    </form>
+    <>
+      <h1>Simple Input</h1>
+      <form onSubmit={formSubmisionHandler}>
+        <div className={nameInputClasses}>
+          <label htmlFor="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            value={enteredName}
+            onChange={nameChangeHandler}
+            onBlur={nameBlurHandler}
+          />
+          {nameInputHasError && (
+            <p className="error-text">Name must not be empty.</p>
+          )}
+        </div>
+        <div className={emailInputClasses}>
+          <label htmlFor="email">E-Mail</label>
+          <input
+            type="email"
+            id="email"
+            onChange={emailChangeHandler}
+            onBlur={emailBlurHandler}
+            value={enteredEmail}
+          />
+          {emailInputHasError && (
+            <p className="error-text">Please enter a valid email.</p>
+          )}
+        </div>
+        <div className="form-actions">
+          <button disabled={!formIsValid}>Submit</button>
+        </div>
+      </form>
+    </>
   );
 };
 

@@ -109,3 +109,12 @@ button:disabled:active {
 .error-text {
   color: #b40e0e;
 }
+
+form:first-child {
+  border-bottom: 3px solid black;
+  padding-bottom: 3rem;
+}
+
+h1 {
+  text-align: center;
+}
